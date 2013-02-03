@@ -1,0 +1,266 @@
+PROBLEM 21.6 A
+
+Given:
+p = 3 
+q = 11 
+e = 7 
+m = 5
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 3 * 11
+n = 33
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(33) = (3 - 1)(11 - 1)
+phe(33) = 20
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(20, e) = 1; 1 < e < 20
+Given: e = 7
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 7 % 20 = 1; d < 20
+3 * 7 % 20 = 1; 3 < 20
+d = 3
+
+Public key KU = [e, n]
+KU = [7, 33]
+
+Private key KR = [d, n]
+KR = [3, 33]
+
+Encryption c = m^e % n; m < n
+c = 5^7 % 33; 5 < 33
+c = 14
+
+Decryption m = c^d % n
+m = 14^3 % 33
+m = 5
+Success: Message decrypted correctly
+
+
+PROBLEM 21.6 B
+
+Given:
+p = 5 
+q = 11 
+e = 3 
+m = 9
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 5 * 11
+n = 55
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(55) = (5 - 1)(11 - 1)
+phe(55) = 40
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(40, e) = 1; 1 < e < 40
+Given: e = 3
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 3 % 40 = 1; d < 40
+27 * 3 % 40 = 1; 27 < 40
+d = 27
+
+Public key KU = [e, n]
+KU = [3, 55]
+
+Private key KR = [d, n]
+KR = [27, 55]
+
+Encryption c = m^e % n; m < n
+c = 9^3 % 55; 9 < 55
+c = 14
+
+Decryption m = c^d % n
+m = 14^27 % 55
+m = 9
+Success: Message decrypted correctly
+
+
+PROBLEM 21.6 c
+
+Given:
+p = 7 
+q = 11 
+e = 17 
+m = 8
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 7 * 11
+n = 77
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(77) = (7 - 1)(11 - 1)
+phe(77) = 60
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(60, e) = 1; 1 < e < 60
+Given: e = 17
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 17 % 60 = 1; d < 60
+53 * 17 % 60 = 1; 53 < 60
+d = 53
+
+Public key KU = [e, n]
+KU = [17, 77]
+
+Private key KR = [d, n]
+KR = [53, 77]
+
+Encryption c = m^e % n; m < n
+c = 8^17 % 77; 8 < 77
+c = 57
+
+Decryption m = c^d % n
+m = 57^53 % 77
+m = 8
+Success: Message decrypted correctly
+
+
+PROBLEM 21.6 D
+
+Given:
+p = 11 
+q = 13 
+e = 11 
+m = 7
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 11 * 13
+n = 143
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(143) = (11 - 1)(13 - 1)
+phe(143) = 120
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(120, e) = 1; 1 < e < 120
+Given: e = 11
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 11 % 120 = 1; d < 120
+11 * 11 % 120 = 1; 11 < 120
+d = 11
+
+Public key KU = [e, n]
+KU = [11, 143]
+
+Private key KR = [d, n]
+KR = [11, 143]
+
+Encryption c = m^e % n; m < n
+c = 7^11 % 143; 7 < 143
+c = 106
+
+Decryption m = c^d % n
+m = 106^11 % 143
+m = 7
+Success: Message decrypted correctly
+
+
+PROBLEM 21.6 E
+
+Given:
+p = 17 
+q = 31 
+e = 7 
+m = 2
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 17 * 31
+n = 527
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(527) = (17 - 1)(31 - 1)
+phe(527) = 480
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(480, e) = 1; 1 < e < 480
+Given: e = 7
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 7 % 480 = 1; d < 480
+343 * 7 % 480 = 1; 343 < 480
+d = 343
+
+Public key KU = [e, n]
+KU = [7, 527]
+
+Private key KR = [d, n]
+KR = [343, 527]
+
+Encryption c = m^e % n; m < n
+c = 2^7 % 527; 2 < 527
+c = 128
+
+Decryption m = c^d % n
+m = 128^343 % 527
+m = 2
+Success: Message decrypted correctly
+
+
+PROBLEM RSA
+
+Given:
+p = 5 
+q = 31 
+e = None 
+m = 25
+
+Step one is done since we are given p and q, such that they are two distinct prime numbers.
+
+Step two, get n where n = pq
+n = 5 * 31
+n = 155
+
+Step three, get "phe" where phe(n) = (p - 1)(q - 1)
+phe(155) = (5 - 1)(31 - 1)
+phe(155) = 120
+
+Step four, select e such that e is relatively prime to phe(n); gcd(phe(n), e) = 1 where 1 < e < phe(n)
+gcd(120, e) = 1; 1 < e < 120
+gcd(120, 7) = 1; 1 < 7 < 120
+e = 7
+
+Step five, determine d such that d*e % phe(n) = 1; d < phe(n)
+d * 7 % 120 = 1; d < 120
+103 * 7 % 120 = 1; 103 < 120
+d = 103
+
+Public key KU = [e, n]
+KU = [7, 155]
+
+Private key KR = [d, n]
+KR = [103, 155]
+
+Encryption c = m^e % n; m < n
+c = 25^7 % 155; 25 < 155
+c = 25
+
+Decryption m = c^d % n
+m = 25^103 % 155
+m = 25
+Success: Message decrypted correctly
+
+Sign s = m^d % n; m < n
+s = 25^103 % 155; 25 < 155
+s = 25
+
+Verify m = s^e % n
+m = 25^7 % 155
+m = 25
+Success: Message verification succeeded
